@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1270">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="topnav">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Work</li>
+          <li>Blog</li>
+        </ul>
+        <form>
+          <input type="search" placeholder="Search">
+          <button type="submit">Search</button>
+        </form>
+    </nav>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="./2022-09-04-15-37-14.jpg" height="570px" style="width:100%">
+          <div class="text"></div>
+        </div>
+    
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="./IMG_20220904_131451.jpg" height="570px" style="width:100%">
+          <div class="text"></div>
+        </div>
+    
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="./IMG_20220904_131402.jpg" height="570px" style="width:100%">
+          <div class="text"></div>
+        </div>
+    
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    
+      </div>
+      <br>
+    
+      <div style="text-align:center">
+        <strong class="dot" onclick="currentSlide(1)"></strong> 
+        <strong class="dot" onclick="currentSlide(2)"></strong> 
+        <strong class="dot" onclick="currentSlide(3)"></strong> 
+      </div>
+      <div class="timeline">
+        <ul>
+          <li>
+            <strong>HTML</strong>
+            <div class="content">
+              <h3>Web-dasturlash</h3>
+              <img src="./pngwing.com (11).png" width="300px">
+            </div>
+          </li>
+          <li>
+            <strong>CSS</strong>
+            <div class="content">
+              <h3>Web-dasturlash</h3>
+              <img src="./pngwing.com (10).png" width="300px">
+            </div>
+          </li>
+          <li>
+            <strong>JS</strong>
+            <div class="content">
+              <h3>Web-dasturlash</h3>
+              <img src="./pngwing.com (12).png" width="300px">
+            </div>
+          </li>
+          <li>
+            <strong></strong>
+            <div class="content">
+              <h3>Web-sayt yaratish</h3>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container-1">
+        <div class="mac">
+            <img class="rsm" src="./pngwing.com (1).png" >
+            <div class="imgBx"></div> 
+        </div>
+        <div class="macBook">
+            <img class="not" src="./pngwing.com (3).png">
+            <div class="imgBx"></div> 
+        </div>
+        <div class="iphone">
+            <img class="tel" src="./pngwing.com (6).png">
+            <div class="imgBx"></div> 
+        </div>
+    </div>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h3>IT<span>-Servis</span></h3>
+
+            <p class="footer-links">
+                <a href="#" class="link-1">Home</a>
+                
+                <a href="#">Blog</a>
+            
+                <a href="#">Pricing</a>
+            
+                <a href="#">About</a>
+                
+                <a href="#">Faq</a>
+                
+                <a href="#">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Company Name © 2015</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1.555.555.5555</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">support@company.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the company</span>
+                Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+      </script>
+</body>
+</html>    
